@@ -1,0 +1,202 @@
+<html lang="es">
+ <head>
+ <LINK REL="SHORTCUT ICON" HREF="favicon.ico">
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <script src="./resources/jquery.min.js">
+  </script>
+  <link href="./resources/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+  <script src="./resources/bootstrap/js/bootstrap.min.js">
+  </script>
+  <link href="webapp.css" rel="stylesheet"/>
+  <script src="./resources/ol.js">
+  </script>
+  <script src="./resources/ol3-extra-controls.js">
+  </script>
+  <script src="./resources/tools.js">
+  </script>
+  <script src="styles/contornodeedificacion.js">
+  </script>
+  <script src="styles/parcelas.js">
+  </script>
+  <script src="./resources/d3.min.js">
+  </script>
+  <script src="./resources/c3.min.js">
+  </script>
+  <link href="./resources/c3.min.css" rel="stylesheet" type="text/css"/>
+  <script src="./charts.js">
+  </script>
+  <script src="layers/lyr_contornodeedificacion.js">
+  </script>
+  <script src="./legend/legend.js">
+  </script>
+  <script src="./resources/bootbox.min.js">
+  </script>
+  <script src="./resources/filtrex.js">
+  </script>
+  <script src="layers/lyr_parcelas.js">
+  </script>
+  <script src="./layers/layers.js" type="text/javascript">
+  </script>
+  <title>
+   Mapa Solar | San Telmo
+  </title>
+ </head>
+ <body>
+  <nav class="navbar navbar-default" id="toolbar" role="navigation">
+   <div class="navbar-header">
+    <button class="navbar-toggle" data-target="#navbar" data-toggle="collapse" type="button">
+     <span class="sr-only">
+      Toggle navigation
+     </span>
+     <span class="icon-bar">
+     </span>
+     <span class="icon-bar">
+     </span>
+     <span class="icon-bar">
+     </span>
+    </button>
+    <img class="pull-left" src="logo.png" style="margin:10px;height:calc(100%%-15px);"/>
+    <!--<a class="navbar-brand" href="#">
+     Mapa Solar
+    </a>-->
+   </div>
+   <div class="collapse navbar-collapse" id="navbar">
+    <ul class="nav navbar-nav navbar-right">
+     <li>
+      <a href="ejemplo.pdf" target="_blank">
+       Informacion
+      </a>
+     </li>
+     <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+       Seleccion
+       <span class="caret">
+        <span>
+        </span>
+       </span>
+      </a>
+      <ul class="dropdown-menu">
+       <li>
+        <a href="#" onclick="selectByPolygon()">
+         Seleccionar por poligono
+        </a>
+       </li>
+       <li>
+        <a href="#" onclick="selectByRectangle()">
+         Seleccionar por rectangulo
+        </a>
+       </li>
+      </ul>
+     </li>
+	 <li>
+        <a href="#" onclick="removeSelectionTool()">
+         Sin Seleccion (Zoom/Pan)
+        </a>
+       </li>
+        <!--<li>
+      <a href="#" id="export-as-image" onclick="saveAsPng()">
+       <i class="glyphicon glyphicon-camera">
+       </i>
+       Exportar Imagen
+      </a>
+     </li>-->
+     <li>
+      <a href="#" onclick="showAttributesTable()">
+       <i class="glyphicon glyphicon-list-alt">
+       </i>
+       Tabla de Atributos
+      </a>
+     </li>
+     <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+       Medir
+       <span class="caret">
+        <span>
+        </span>
+       </span>
+      </a>
+      <ul class="dropdown-menu">
+       <li>
+        <a href="#" onclick="measureTool('distance')">
+         Distancia
+        </a>
+       </li>
+       <li>
+        <a href="#" onclick="measureTool('area')">
+         Area
+        </a>
+       </li>
+       <li>
+        <a href="#" onclick="measureTool(null)">
+         Remover mediciones
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+       <i class="glyphicon glyphicon-stats">
+       </i>
+       Consultas
+       <span class="caret">
+        <span>
+        </span>
+       </span>
+      </a>
+      <ul class="dropdown-menu">
+       <li>
+        <a href="#" onclick="openChart('Contorno de Edificacion')">
+         Contorno de Edificacion
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <a href="#" onclick="addLayerFromFile()">
+       <i class="glyphicon glyphicon-open">
+       </i>
+       Agregar Capa
+      </a>
+     </li>
+    </ul>
+   </div>
+  </nav>
+  <div id="content">
+   <div id="map">
+    <div class="ol-popup" id="popup">
+     <a class="closer-icon" href="#" id="popup-closer">
+      &times;
+     </a>
+     <div id="popup-content">
+      Popup
+     </div>
+    </div>
+   </div>
+   <div class="attributes-table">
+    <a class="attributes-table-closer" href="#" id="attributes-table-closer">
+     Cerrar
+    </a>
+   </div>
+   <div class="chart-panel" id="chart-panel">
+    <span class="chart-panel-info" id="chart-panel-info">
+    </span>
+    <a class="chart-panel-closer" href="#" id="chart-panel-closer">
+     Cerrar
+    </a>
+    <div id="chart">
+    </div>
+   </div>
+  </div>
+  <div style="top:95%;left:25%; z-index:1000000;position:absolute;color: #FFD300">
+  <div>
+    <div align="center">Subsecretaria de Planeamiento - Subsecretaria de Registros, Interpretacion y Catastro, Ministerio de Desarrollo Urbano y Transporte, GCBA. - 2016</div>
+  </div>
+</div>
+  <script src="./index.js">
+  </script>
+ </body>
+</html>
