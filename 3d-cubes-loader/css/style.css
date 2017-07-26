@@ -1,0 +1,105 @@
+.opensans {
+  font-family: "Open Sans";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+.interface {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.switcher {
+  position: absolute;
+  bottom: 48px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+.switcher-button {
+  display: inline-block;
+  margin: 0 6px;
+  font-family: "Open Sans";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 18px;
+  color: #a0a0a0;
+  text-decoration: none;
+  -webkit-transition: color 0.2s ease-out;
+  -moz-transition: color 0.2s ease-out;
+  -o-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+}
+.switcher-button:hover,
+.switcher-button.is-active {
+  color: #000;
+  font-weight: bold;
+  -webkit-transition: color 0.2s ease-in;
+  -moz-transition: color 0.2s ease-in;
+  -o-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
+}
+.text {
+  font-family: "Open Sans";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  color: #000;
+}
+.text-made {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+}
+.text-inspiration {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+}
+.text-link {
+  position: relative;
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+}
+.text-link:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #000;
+  -webkit-transition: width 0.2s ease-out;
+  -moz-transition: width 0.2s ease-out;
+  -o-transition: width 0.2s ease-out;
+  transition: width 0.2s ease-out;
+}
+.text-link:hover:after {
+  width: 100%;
+}
+.love svg {
+  width: 12px;
+  height: 12px;
+  fill: #F44336;
+}

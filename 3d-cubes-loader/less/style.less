@@ -1,0 +1,111 @@
+@import "lesshat";
+
+@black: #000;
+@grey: #f0f0f0;
+@mediumgrey: #a0a0a0;
+@red: #F44336;
+
+.opensans {
+	font-family : "Open Sans";
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+
+	background-color: @grey;
+}
+
+.interface {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+}
+
+canvas {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	.translate(-50%, -50%);
+}
+
+.switcher {
+	position: absolute;
+	bottom: 48px;
+	left: 50%;
+	.translate(-50%, 0);
+}
+
+.switcher-button {
+	display: inline-block;
+	margin: 0 6px;
+	
+	.opensans;
+	font-size: 18px;
+	color: @mediumgrey;
+	text-decoration: none;
+
+	.transition(color 0.2s ease-out);
+
+	&:hover, &.is-active {
+		color: @black;
+		font-weight: bold;
+		
+		.transition(color 0.2s ease-in);
+	}
+}
+
+.text {
+	.opensans;
+	font-size: 14px;
+	color: @black;
+}
+
+.text-made {
+	position: absolute;
+	bottom: 24px;
+	left: 24px;
+}
+
+.text-inspiration {
+	position: absolute;
+	bottom: 24px;
+	right: 24px;
+}
+
+.text-link {
+	position: relative;
+
+	color: @black;
+  font-weight: 600;
+	text-decoration: none;
+
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0;
+		height: 1px;
+
+		background-color: @black;
+
+		.transition(width 0.2s ease-out);
+	}
+
+	&:hover {
+		&:after {
+			width: 100%;
+		}
+	}
+}
+
+.love svg {
+	width: 12px;
+	height: 12px;
+	fill: @red;
+}
