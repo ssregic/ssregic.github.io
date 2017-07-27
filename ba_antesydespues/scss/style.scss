@@ -1,0 +1,126 @@
+@import "compass";
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC);
+
+$blue: #9BB3D7;
+$amount: 0.2%;
+$dark-green: #A79020;
+$light-red: #B5482A;
+
+body{
+  background: #251B13;
+}
+
+/*wrapper that holds both of the images*/
+div#comparison { 
+	height: 60vw;
+	width: 100%;
+  margin: 0;
+	overflow: hidden; 
+  position: relative;
+  font-family: 'Amatic SC', cursive;
+}
+
+/*The right image*/
+div#comparison #original{
+  background: url(https://images.unsplash.com/photo-1454982523318-4b6396f39d3a?crop=entropy&fit=crop&fm=jpg&h=1375&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=2575);
+  background-size: auto 100%;
+  position: absolute;
+  display: block;
+  margin: 0;
+	width: 100%;
+	height: 100%;
+   & h1{
+    position: absolute;
+    color: $blue;
+    z-index: auto;
+    top: 0;
+    bottom: 0;
+    right: 20vw;
+    margin: auto 0;
+    height: 1em;
+    font-size: 10em;
+    }
+}
+/*The left image container which holds the left image*/
+div#comparison #changed { 
+	margin: 0; 
+  width: 90%; /*Set the starting position of the angle*/
+  height: 100%;
+  overflow: hidden;
+  display: inline-block;
+  border-right: 20px solid $light-red;
+  background: $dark-green;
+  transform: skewX(-30deg) translate(-35vw);
+  /*Skew the image for the angle and move #changed so you don't see the left angle*/
+  & div { 
+    background: url(https://images.unsplash.com/photo-1454982523318-4b6396f39d3a?crop=entropy&fit=crop&fm=jpg&h=1375&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=2575) center left no-repeat;
+    background-size: auto 100%;
+    width: 100%; 
+    height: 100%;
+    mix-blend-mode: screen;
+    transform: skewX(30deg) translate(35vw);
+    /*Make the image square and translate it back so that it matchs the right image*/
+  }
+  &  h1{
+  position: absolute;
+  color: $blue;
+  z-index: 9999;
+  top: 0;
+  bottom: 0;
+  left: 20vw;
+  margin: auto 0;
+  height: 1em;
+  font-size: 10em
+  }
+}
+
+/*
+RANGE STYLE
+*/
+input[type=range]{
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	position: relative;
+	top: -5em;
+  left: -2%;
+	background-color: rgba($blue, $amount);
+	width: 102%; 
+  &:focus { 
+    outline: none;
+  }
+  &:active {
+    outline: none;
+  }
+  &::-moz-range-track {
+    -moz-appearance:none;
+    height:55px;
+    width: 98%;
+    background-color: rgba($blue, $amount); 
+    position: relative;
+    outline: none;    
+  }
+    &::active {
+    border: none;
+    outline: none;
+  }
+    &::-webkit-slider-thumb {
+    -webkit-appearance:none;
+    width: 50px;
+    height: 50px;
+    background: $blue;
+    border-radius: 50%;
+  }
+    &::-moz-range-thumb {
+    -moz-appearance: none;
+    width: 50px;
+    height: 50px;
+    background: $blue;
+    border-radius: 50%;
+  }   
+    &:focus::-webkit-slider-thumb {
+    background: $blue;
+  }
+    &:focus::-moz-range-thumb {
+    background: $blue;
+  }
+}

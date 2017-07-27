@@ -1,0 +1,121 @@
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans+SC);
+body {
+  background: #251B13;
+}
+
+/*wrapper that holds both of the images*/
+div#comparison {
+  height: 60vw;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+/*The right image*/
+div#comparison #original {
+  background: url(http://ssregic.github.io/images/obelisco1940.jpg);
+  background-size: auto 100%;
+  position: absolute;
+  display: block;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+div#comparison #original h1 {
+  position: absolute;
+  color: #FFD306;
+  z-index: auto;
+  top: 0;
+  bottom: 0;
+  right: 20vw;
+  margin: auto 0;
+  height: 1em;
+  font-size: 5em;
+}
+
+/*The left image container which holds the left image*/
+div#comparison #changed {
+  margin: 0;
+  width: 100%;
+  /*Set the starting position of the angle*/
+  height: 100%;
+  overflow: hidden;
+  display: inline-block;
+  border-right: 15px solid #FFD306;
+  #background: #A79020;
+  transform: skewX(-30deg) translate(-35vw);
+  /*Skew the image for the angle and move #changed so you don't see the left angle*/
+}
+div#comparison #changed div {
+  background: url(http://ssregic.github.io/images/obelisco2014.jpg) center left no-repeat;
+  background-size: auto 100%;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: screen;
+  transform: skewX(30deg) translate(35vw);
+  /*Make the image square and translate it back so that it matchs the right image*/
+}
+div#comparison #changed h1 {
+  position: absolute;
+  color: #FFD306;
+  z-index: 9999;
+  top: 0;
+  bottom: 0;
+  left: 20vw;
+  margin: auto 0;
+  height: 1em;
+  font-size: 5em;
+}
+
+/*
+RANGE STYLE
+*/
+input[type=range] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  top: -5em;
+  left: -2%;
+  background-color: rgba(155, 179, 215, 0.2);
+  width: 100%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]:active {
+  outline: none;
+}
+input[type=range]::-moz-range-track {
+  -moz-appearance: none;
+  height: 55px;
+  width: 98%;
+  background-color: rgba(155, 179, 215, 0.2);
+  position: relative;
+  outline: none;
+}
+input[type=range]::active {
+  border: none;
+  outline: none;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 50px;
+  height: 50px;
+  background: #9BB3D7;
+  border-radius: 50%;
+}
+input[type=range]::-moz-range-thumb {
+  -moz-appearance: none;
+  width: 50px;
+  height: 50px;
+  background: #9BB3D7;
+  border-radius: 50%;
+}
+input[type=range]:focus::-webkit-slider-thumb {
+  background: #9BB3D7;
+}
+input[type=range]:focus::-moz-range-thumb {
+  background: #9BB3D7;
+}
