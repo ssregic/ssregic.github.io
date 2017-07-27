@@ -25,9 +25,24 @@
 		
 		
 
-		<!--Fin elementos del antes y despues-->
-
+		<!--Style para iframe en mobile-->
+<style>
+		.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+}
+		.video-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 		
+		</style>
         <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -60,9 +75,9 @@
                           </ul>
                         </li>
 
-                        <li><a href="#bastrap" class="smoothScroll">Obelisco</a>
+                        <li><a href="#obelisco" class="smoothScroll">Obelisco</a>
                           <ul class="nav" style="display:none;">
-                            <li><a href="#bastrap" class="smoothScroll">Obelisco</a></li>
+                            <li><a href="#obelisco" class="smoothScroll">Obelisco</a></li>
                           </ul>
                         </li>
 
@@ -105,8 +120,8 @@
 									   <div class="col-lg-3 col-md-12" style="bottom: 0px; margin-top: 0px;"><a href="#"><img src="images/bastrap7_ilustraciones-05.png" class="img-responsive img-checklist"></a>
                                             </div>
                                             <div class="col-lg-8 col-md-12" style="margin-top:25px;">
-                                            <h2>SSREGIC Lab</h2>
-                                                <p>Bienvenido al laboratorio de proyectos digitales de la SSREGIC. En este sitio se puede visualizar los diferentes trabajos realizados en base a la informacion generada por la Subsecretaria de Registros Interpretacion y Catastro. El objetivo de esto es generar una mejor experiencia digital y de comunicación entre el Estado y el vecino.</strong><br><br><br></p>
+                                            <h2>BA Antes y Después</h2>
+                                                <p>En esta sección se podrá visualizar los diferentes cambios que tuvo la Ciudad en su historia. Esto se podra visualizar en diferentes sitios icónicos de Buenos Aires. La informacion se obtuvo de las fotografías aéreas que fueron recopiladas en el siguiente mapa.</strong><br><br><br></p>
                                                 <div class="col-lg-6 col-md-12"><p><a class="btn btn-primary btn-lg" role="button" href="http://www.buenosaires.gob.ar/planificacion/registrosinterpretacionycatastro">Mapa de Fotos Aereas</a></p></div>
                                   
 								<!--       <div class="col-lg-6 col-md-12"><p><a class="btn btn-default btn-lg" role="button" href="#">Aplicaciones</a></p></div> -->
@@ -115,16 +130,11 @@
 								</div>
 								</div> 
 								</div>
+								</div>
 								
-								<div class="container container_secundario">
-                                    
-									<iframe width="1020" height="612" src="https://ssregic.github.io/ba_antesydespues/" frameborder="0" allowfullscreen=""></iframe>
-                                   
-									</div>
-									</div>
+						<!--Bloque Obelisco | En id= hay que cambiar al parametro que se asigna en el menu para que pueda hacer el scroll a la seccion deseada.-->		
 								
-								
-								<div class="panel-body intro_grisclaro"   id="introduccion">
+								<div class="panel-body intro_grisclaro"   id="obelisco">
 						
                                     <div class="container container_secundario">
                                         <!--<img src="images/bastrap7_ilustraciones-05.png" alt="" class="img-responsive imagen_bienvenida">-->
@@ -141,6 +151,7 @@
 								
 								
 								
+						<!--Fin Bloque Obelisco-->
 								
                                 <div class="panel-body intro_gris"   id="recursos">
                                     <div class="container container_secundario">
