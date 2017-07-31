@@ -22,8 +22,8 @@ var storymap_data = {
       },
       "location": {
         "name": "Area Ambiental San Telmo - Calles Alsina y Moreno",
-        "lat": -58.374682801900001,
-        "lon": -34.610837882799999,
+        "lat": -34.610837882799999,
+        "lon": -58.374682801900001,
         "zoom": 10,
         "line": true
       },
