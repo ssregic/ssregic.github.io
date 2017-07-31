@@ -25,7 +25,7 @@ var storymap_data = {
         "name": "Area Ambiental San Telmo - Calles Alsina y Moreno",
         "lat": -34.610837882799999,
         "lon": -58.374682801900001,
-        "zoom": 10,
+        "zoom": 5,
         "line": true
       },
       "media": {
@@ -47,7 +47,7 @@ var storymap_data = {
         "name": "Demoliciones en el Parque de la Ciudad",
         "lat": -34.675031707499997,
         "lon": -58.455459544,
-        "zoom": 10,
+        "zoom": 5,
         "line": true
       },
       "media": {
