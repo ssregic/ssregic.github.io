@@ -14,6 +14,7 @@ var storymap_data = {
       }
     }, 
 	
+//inicio item
 	{
 
       "text": {
@@ -29,60 +30,35 @@ var storymap_data = {
       },
       "media": {
         "url": "http://cdn2.buenosaires.gob.ar/desarrollourbano/sociopublico/moreno/moreno_despues.jpg",
-        "caption": "Image Example"
+        "caption": ""
       }
-    }, {
+    }, 
+
+//fin item
+
+//inicio item
+	{
 
       "text": {
-        "headline": "LIVERPOOL CENTRAL",
-        "text": "<p>Lorem ipsum dolor sit amet, qui an mutat dicit numquam, duo ne adhuc reque delicatissimi. Ea pri quidam consequuntur, harum cetero philosophia eu quo. No mel nusquam forensibus. Fugit tantas ancillae id pri.</p>"
+        "headline": "Demoliciones en el Parque de la Ciudad",
+	  "text": "<p>Realizacion de las demoliciones necesarias de las construcciones existentes en el predio del Parque de la Ciudad de Buenos Aires con el objetivo de la construccion y emplazamiento de la Villa Olimpica en la Comuna 8.<br> Area Resposable: S.S. de Proyectos <br> Entorno: Villa Olimpica <br> Etapa: FINALIZADA <br> Detalle: Adjudicada<br> Tipo de Obra: Arquitectura<br> Comuna: 8 <br> Barrio: Villa Soldati <br> Direccion: Escalada Av. 4218</p>"
       },
       "location": {
-        "name": "Lime street",
-        "lat": 53.404667,
-        "lon": -2.980034,
+        "name": "Demoliciones en el Parque de la Ciudad",
+        "lat": -34.675031707499997,
+        "lon": -58.455459544,
         "zoom": 10,
         "line": true
       },
       "media": {
-        "url": "https://twitter.com/katewales_/status/781554178288214016",
-        "caption": "Twitter example"
+        "url": "http://cdn2.buenosaires.gob.ar/desarrollourbano/sociopublico/moreno/moreno_despues.jpg",
+        "caption": ""
       }
-    }, {
+    }, 
 
-      "text": {
-        "headline": "JAMES STREET",
-        "text": "<p>Lorem ipsum dolor sit amet, qui an mutat dicit numquam, duo ne adhuc reque delicatissimi. Ea pri quidam consequuntur, harum cetero philosophia eu quo. No mel nusquam forensibus. Fugit tantas ancillae id pri.</p>"
-      },
-      "location": {
-        "name": "Lime street",
-        "lat": 53.404920,
-        "lon": -2.991936,
-        "zoom": 10,
-        "line": true
-      },
-      "media": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Liverpool_James_Street_railway_station.jpg/1280px-Liverpool_James_Street_railway_station.jpg",
-        "caption": "Image example"
-      }
-    }, {
+//fin item
 
-      "text": {
-        "headline": "MOORFIELDS",
-        "text": ""
-      },
-      "location": {
-        "name": "Lime street",
-        "lat": 53.408749,
-        "lon": -2.989193,
-        "zoom": 10,
-        "line": true
-      },
-      "media": {
-        "url": "https://en.wikipedia.org/wiki/Moorfields_railway_station",
-        "caption": "Wiki link example"
-      }
-    }, ]
+	]
   }
 }
 
