@@ -117,7 +117,7 @@ var storymap_data = {
         "lon": -58.453917513599997,
         "zoom": 5,
         "line": true
-      },..
+      },
       "media": {
         "url": "http://cdn2.buenosaires.gob.ar/desarrollourbano/sociopublico/villaolimpica/olimpica_render1.jpg",
         "caption": ""
@@ -139,7 +139,7 @@ var storymap_data = {
         "lon": -58.451674436,
         "zoom": 5,
         "line": true
-      },..
+      },
       "media": {
         "url": "http://cdn2.buenosaires.gob.ar/desarrollourbano/sociopublico/villaolimpica/olimpica_render1.jpg",
         "caption": ""
