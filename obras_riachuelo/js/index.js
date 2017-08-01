@@ -58,6 +58,97 @@ var storymap_data = {
 
 //fin item
 
+
+//inicio item
+	{
+
+      "text": {
+        "headline": "Villa Olimpica. Viviendas II",
+	  "text": "<p>La Licitacion II comprende 3 edificios destinados a los Juegos Olimpicos. Se construiran aproximadamente 13.000m2 de vivienda y ademas 470m2 que seran destinados a locales comerciales.<br> Area Resposable: S.S. de Proyectos <br> Entorno: Villa Olimpica <br> Etapa: EN EJECUCION <br> Detalle: Adjudicada<br> Tipo de Obra: Arquitectura<br> Comuna: 8 <br> Barrio: Villa Soldati <br> Direccion: Av. Fernandez de la Cruz y Escalada; y Av. Roca</p>"
+      },
+      "location": {
+        "name": "Villa Olimpica. Viviendas II",
+        "lat": -34.676450192700003,
+        "lon": -58.453251615799999,
+        "zoom": 5,
+        "line": true
+      },
+      "media": {
+        "url": "http://cdn2.buenosaires.gob.ar/desarrollourbano/sociopublico/villaolimpica/olimpica_render1.jpg",
+        "caption": ""
+      }
+    }, 
+
+//fin item
+
+
+//inicio item
+	{
+
+      "text": {
+        "headline": "Villa Olimpica. Viviendas III",
+	  "text": "<p>La Licitacion III comprende 3 edificios destinados a los Juegos Olimpicos. Se construiran aproximadamente 13.000m2 de vivienda y ademas 370m2 que seran destinados a locales comerciales.<br> Entorno: Villa Olimpica <br> Etapa: EN EJECUCION <br> Detalle: Adjudicada<br> Tipo de Obra: Arquitectura<br> Comuna: 8 <br> Barrio: Villa Soldati <br> Direccion: Av. Fernandez de la Cruz y Escalada; y Av. Roca</p>"
+      },
+      "location": {
+        "name": "Villa Olimpica. Viviendas III",
+        "lat": -34.676421322700001,
+        "lon": -58.454373043300002,
+        "zoom": 5,
+        "line": true
+      },
+      "media": {
+        "url": "http://cdn2.buenosaires.gob.ar/desarrollourbano/sociopublico/villaolimpica/olimpica_render1.jpg",
+        "caption": ""
+      }
+    }, 
+
+//fin item
+
+//inicio item
+	{
+
+      "text": {
+        "headline": "Villa Olimpica. Viviendas IV",
+	  "text": "<p>La Licitacion IV comprende 3 edificios destinados a los Juegos Olimpicos. Se construiran aproximadamente 14.050m2 de vivienda y ademas 380m2 que seran destinados a locales comerciales.<br> Etapa: EN EJECUCION <br> Detalle: Adjudicada<br> Tipo de Obra: Arquitectura<br> Comuna: 8 <br> Barrio: Villa Soldati <br> Direccion: Av. Fernandez de la Cruz y Escalada; y Av. Roca</p>"
+      },
+      "location": {
+        "name": "Villa Olimpica. Viviendas IV",
+        "lat": -34.676421322700001,
+        "lon": -58.453917513599997,
+        "zoom": 5,
+        "line": true
+      },..
+      "media": {
+        "url": "http://cdn2.buenosaires.gob.ar/desarrollourbano/sociopublico/villaolimpica/olimpica_render1.jpg",
+        "caption": ""
+      }
+    }, 
+
+//fin item
+
+//inicio item
+	{
+
+      "text": {
+        "headline": "Villa Olimpica. Viviendas IX",
+	  "text": "<p>La Licitacion IX comprende 3 edificios destinados a los Juegos Olimpicos. Se construiran aproximadamente 9.900m2 de vivienda y ademas 250m2 que seran destinados a locales comerciales.</p>"
+      },
+      "location": {
+        "name": "Villa Olimpica. Viviendas IX",
+        "lat": -34.677781841,
+        "lon": -58.451674436,
+        "zoom": 5,
+        "line": true
+      },..
+      "media": {
+        "url": "http://cdn2.buenosaires.gob.ar/desarrollourbano/sociopublico/villaolimpica/olimpica_render1.jpg",
+        "caption": ""
+      }
+    }, 
+
+//fin item
+
+
 	]
   }
 }
