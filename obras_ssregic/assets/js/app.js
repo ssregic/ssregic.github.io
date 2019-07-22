@@ -209,7 +209,7 @@ var markerClusters = new L.MarkerClusterGroup({
   spiderfyOnMaxZoom: true,
   showCoverageOnHover: false,
   zoomToBoundsOnClick: true,
-  disableClusteringAtZoom: 5
+  disableClusteringAtZoom: 16
 });
 
 /* Empty layer placeholder to add to layer control for listening when to add/remove theaters to markerClusters layer */
@@ -229,7 +229,7 @@ var theaters = L.geoJson(null, {
   },
   onEachFeature: function (feature, layer) {
     if (feature.properties) {
-      var content = "<table class='table table-striped table-bordered table-condensed'>" + "<tr><th>Tipo de Obra</th><td>" + feature.properties.NAME + "</td></tr>" + "<tr><th>Fecha</th><td>" + feature.properties.TEL + "</td></tr>" + "<tr><th>Direccion</th><td>" + feature.properties.address + "<tr><th>N° de Expediente</th><td>" + feature.properties.expediente + "<tr><th>Superficie</th><td>" + feature.properties.m2 + "</a></td></tr>" + "<table>";
+      var content = "<table class='table table-striped table-bordered table-condensed'>" + "<tr><th>Tipo de Obra</th><td>" + feature.properties.NAME + "</td></tr>" + "<tr><th>Fecha</th><td>" + feature.properties.TEL + "</td></tr>" + "<tr><th>Direccion</th><td>" + feature.properties.address + "<tr><th>N° de Expediente</th><td>" + feature.properties.expediente + "<tr><th>Superficie M2</th><td>" + feature.properties.m2 + "</a></td></tr>" + "<table>";
       layer.on({
         click: function (e) {
           $("#feature-title").html(feature.properties.NAME);
@@ -272,7 +272,7 @@ var museums = L.geoJson(null, {
   },
   onEachFeature: function (feature, layer) {
     if (feature.properties) {
-      var content = "<table class='table table-striped table-bordered table-condensed'>" + "<tr><th>Tipo de Obra</th><td>" + feature.properties.NAME + "</td></tr>" + "<tr><th>Fecha</th><td>" + feature.properties.TEL + "</td></tr>" + "<tr><th>Direccion</th><td>" + feature.properties.address + "<tr><th>N° de Expediente</th><td>" + feature.properties.expediente + "<tr><th>Superficie</th><td>" + feature.properties.m2 + "</a></td></tr>" + "<table>";
+      var content = "<table class='table table-striped table-bordered table-condensed'>" + "<tr><th>Tipo de Obra</th><td>" + feature.properties.NAME + "</td></tr>" + "<tr><th>Fecha</th><td>" + feature.properties.TEL + "</td></tr>" + "<tr><th>Direccion</th><td>" + feature.properties.address + "<tr><th>N° de Expediente</th><td>" + feature.properties.expediente + "<tr><th>Superficie M2</th><td>" + feature.properties.m2 + "</a></td></tr>" + "<table>";
       layer.on({
         click: function (e) {
           $("#feature-title").html(feature.properties.NAME);
