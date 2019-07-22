@@ -518,8 +518,14 @@ var baseLayers = {
 
 var groupedOverlays = {
   "Estado de Obra": {
-    "<img src='assets/img/theater.png' width='24' height='28'>&nbsp;Iniciada": theaterLayer,
-    "<img src='assets/img/museum.png' width='24' height='28'>&nbsp;No Iniciada": museumLayer
+    
+	"<img src='assets/img/theater.png' width='24' height='28'>&nbsp;Micro Obra": theaterLayer,
+	
+	"<img src='assets/img/theater.png' width='24' height='28'>&nbsp;Obra Mayor": theater1Layer,
+    
+	"<img src='assets/img/theater.png' width='24' height='28'>&nbsp;Obra Media": museumLayer,
+    
+	"<img src='assets/img/museum.png' width='24' height='28'>&nbsp;Obra Menor": museum1Layer
   },
   "Referencias": {
     "Comunas": boroughs
@@ -659,7 +665,7 @@ $(document).one("ajaxStop", function () {
     displayKey: "address",
     source: theatersBH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='assets/img/theater.png' width='24' height='28'>&nbsp;Obra Iniciada</h4>",
+      header: "<h4 class='typeahead-header'><img src='assets/img/theater.png' width='24' height='28'>&nbsp;Micro Obra</h4>",
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{address}}</small>"].join(""))
     }
   }, 
@@ -669,7 +675,7 @@ $(document).one("ajaxStop", function () {
     displayKey: "address",
     source: theaters1BH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='assets/img/theater.png' width='24' height='28'>&nbsp;Obra Iniciada</h4>",
+      header: "<h4 class='typeahead-header'><img src='assets/img/theater.png' width='24' height='28'>&nbsp;Obra Mayor</h4>",
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{address}}</small>"].join(""))
     }
   }, 
@@ -679,7 +685,7 @@ $(document).one("ajaxStop", function () {
     displayKey: "address",
     source: museumsBH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='assets/img/museum.png' width='24' height='28'>&nbsp;Obra No Iniciada</h4>",
+      header: "<h4 class='typeahead-header'><img src='assets/img/museum.png' width='24' height='28'>&nbsp;Obra Media</h4>",
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{address}}</small>"].join(""))
     }
   }, 
@@ -689,7 +695,7 @@ $(document).one("ajaxStop", function () {
     displayKey: "address",
     source: museums1BH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='assets/img/museum.png' width='24' height='28'>&nbsp;Obra No Iniciada</h4>",
+      header: "<h4 class='typeahead-header'><img src='assets/img/museum.png' width='24' height='28'>&nbsp;Obra Menor</h4>",
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{address}}</small>"].join(""))
     }
   }, 
