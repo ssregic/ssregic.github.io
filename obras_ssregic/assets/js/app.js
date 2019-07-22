@@ -229,7 +229,7 @@ var theaters = L.geoJson(null, {
   },
   onEachFeature: function (feature, layer) {
     if (feature.properties) {
-      var content = "<table class='table table-striped table-bordered table-condensed'>" + "<tr><th>Name</th><td>" + feature.properties.NAME + "</td></tr>" + "<tr><th>Phone</th><td>" + feature.properties.TEL + "</td></tr>" + "<tr><th>Address</th><td>" + feature.properties.ADDRESS1 + "</td></tr>" + "</a></td></tr>" + "<table>";
+      var content = "<table class='table table-striped table-bordered table-condensed'>" + "<tr><th>Tipo de Obra</th><td>" + feature.properties.NAME + "</td></tr>" + "<tr><th>Fecha</th><td>" + feature.properties.TEL + "</td></tr>" + "<tr><th>Direccion</th><td>" + feature.properties.ADDRESS1 + "</td></tr>" + "</a></td></tr>" + "<table>";
       layer.on({
         click: function (e) {
           $("#feature-title").html(feature.properties.NAME);
@@ -354,7 +354,7 @@ var attributionControl = L.control({
 });
 attributionControl.onAdd = function (map) {
   var div = L.DomUtil.create("div", "leaflet-control-attribution");
-  div.innerHTML = "<span class='hidden-xs'>Developed by <a href='http://bryanmcbride.com'>bryanmcbride.com</a> | </span><a href='#' onclick='$(\"#attributionModal\").modal(\"show\"); return false;'>Attribution</a>";
+  div.innerHTML = "<span class='hidden-xs'>Desarrollado por <a href='http://ssregic.github.io/'>SSREGIC</a>";
   return div;
 };
 map.addControl(attributionControl);
@@ -382,8 +382,8 @@ var locateControl = L.control.locate({
   icon: "fa fa-location-arrow",
   metric: false,
   strings: {
-    title: "My location",
-    popup: "You are within {distance} {unit} from this point",
+    title: "Mi Ubicacion",
+    popup: "Te encuentras a {distance} {unit} de este punto",
     outsideMapBoundsMsg: "You seem located outside the boundaries of the map"
   },
   locateOptions: {
@@ -446,7 +446,7 @@ $(document).one("ajaxStop", function () {
   featureList.sort("feature-name", {order:"asc"});
 
   var boroughsBH = new Bloodhound({
-    name: "Boroughs",
+    name: "Comunas",
     datumTokenizer: function (d) {
       return Bloodhound.tokenizers.whitespace(d.name);
     },
@@ -456,7 +456,7 @@ $(document).one("ajaxStop", function () {
   });
 
   var theatersBH = new Bloodhound({
-    name: "Theaters",
+    name: "Obras Iniciadas",
     datumTokenizer: function (d) {
       return Bloodhound.tokenizers.whitespace(d.name);
     },
@@ -466,7 +466,7 @@ $(document).one("ajaxStop", function () {
   });
 
   var museumsBH = new Bloodhound({
-    name: "Museums",
+    name: "Obras No Iniciadas",
     datumTokenizer: function (d) {
       return Bloodhound.tokenizers.whitespace(d.name);
     },
@@ -516,14 +516,14 @@ $(document).one("ajaxStop", function () {
     highlight: true,
     hint: false
   }, {
-    name: "Boroughs",
+    name: "Comunas",
     displayKey: "name",
     source: boroughsBH.ttAdapter(),
     templates: {
       header: "<h4 class='typeahead-header'>Boroughs</h4>"
     }
   }, {
-    name: "Theaters",
+    name: "Obras Iniciadas",
     displayKey: "name",
     source: theatersBH.ttAdapter(),
     templates: {
@@ -531,7 +531,7 @@ $(document).one("ajaxStop", function () {
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{address}}</small>"].join(""))
     }
   }, {
-    name: "Museums",
+    name: "Obras No Iniciadas",
     displayKey: "name",
     source: museumsBH.ttAdapter(),
     templates: {
@@ -546,10 +546,10 @@ $(document).one("ajaxStop", function () {
       header: "<h4 class='typeahead-header'><img src='assets/img/globe.png' width='25' height='25'>&nbsp;GeoNames</h4>"
     }
   }).on("typeahead:selected", function (obj, datum) {
-    if (datum.source === "Boroughs") {
+    if (datum.source === "Comunas") {
       map.fitBounds(datum.bounds);
     }
-    if (datum.source === "Theaters") {
+    if (datum.source === "Obras Iniciadas") {
       if (!map.hasLayer(theaterLayer)) {
         map.addLayer(theaterLayer);
       }
@@ -558,7 +558,7 @@ $(document).one("ajaxStop", function () {
         map._layers[datum.id].fire("click");
       }
     }
-    if (datum.source === "Museums") {
+    if (datum.source === "Obras No Iniciadas") {
       if (!map.hasLayer(museumLayer)) {
         map.addLayer(museumLayer);
       }
