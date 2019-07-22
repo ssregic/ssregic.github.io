@@ -354,7 +354,7 @@ var attributionControl = L.control({
 });
 attributionControl.onAdd = function (map) {
   var div = L.DomUtil.create("div", "leaflet-control-attribution");
-  div.innerHTML = "<span class='hidden-xs'>Developed by <a href='http://bryanmcbride.com'>bryanmcbride.com</a> | </span><a href='#' onclick='$(\"#attributionModal\").modal(\"show\"); return false;'>Attribution</a>";
+  div.innerHTML = "<span class='hidden-xs'>Desarrollado por <a href='http://ssregic.github.io/'>SSREGIC</a>";
   return div;
 };
 map.addControl(attributionControl);
@@ -382,8 +382,8 @@ var locateControl = L.control.locate({
   icon: "fa fa-location-arrow",
   metric: false,
   strings: {
-    title: "My location",
-    popup: "You are within {distance} {unit} from this point",
+    title: "Mi Ubicacion",
+    popup: "Te encuentras a {distance} {unit} de este punto",
     outsideMapBoundsMsg: "You seem located outside the boundaries of the map"
   },
   locateOptions: {
@@ -528,7 +528,7 @@ $(document).one("ajaxStop", function () {
     source: theatersBH.ttAdapter(),
     templates: {
       header: "<h4 class='typeahead-header'><img src='assets/img/theater.png' width='24' height='28'>&nbsp;Obra Iniciada</h4>",
-      suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{ESTADO}}</small>"].join(""))
+      suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{address}}</small>"].join(""))
     }
   }, {
     name: "Museums",
@@ -536,7 +536,7 @@ $(document).one("ajaxStop", function () {
     source: museumsBH.ttAdapter(),
     templates: {
       header: "<h4 class='typeahead-header'><img src='assets/img/museum.png' width='24' height='28'>&nbsp;Obra No Iniciada</h4>",
-      suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{ESTADO}}</small>"].join(""))
+      suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{address}}</small>"].join(""))
     }
   }, {
     name: "GeoNames",
