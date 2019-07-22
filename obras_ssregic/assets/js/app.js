@@ -237,7 +237,7 @@ var markerClusters = new L.MarkerClusterGroup({
 
 //VARIABLES DE LAYERS
 
-/* Empty layer placeholder to add to layer control for listening when to add/remove theaters to markerClusters layer */
+/* Empty layer placeholder to add to layer control for listening when to add/remove theaters to  layer */
 var theaterLayer = L.geoJson(null);
 var theaters = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
@@ -280,7 +280,7 @@ $.getJSON("data/micro_obra.geojson", function (data) {
   map.addLayer(theaterLayer);
 });
 
-/* Empty layer placeholder to add to layer control for listening when to add/remove theaters to markerClusters layer */
+/* Empty layer placeholder to add to layer control for listening when to add/remove theaters to  layer */
 var theater1Layer = L.geoJson(null);
 var theaters1 = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
@@ -323,7 +323,7 @@ $.getJSON("data/obra_mayor.geojson", function (data) {
   map.addLayer(theater1Layer);
 });
 
-/* Empty layer placeholder to add to layer control for listening when to add/remove museums to markerClusters layer */
+/* Empty layer placeholder to add to layer control for listening when to add/remove museums to  layer */
 var museumLayer = L.geoJson(null);
 var museums = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
@@ -365,7 +365,7 @@ $.getJSON("data/obra_media.geojson", function (data) {
   museums.addData(data);
 });
 
-/* Empty layer placeholder to add to layer control for listening when to add/remove museums to markerClusters layer */
+/* Empty layer placeholder to add to layer control for listening when to add/remove museums to  layer */
 var museum1Layer = L.geoJson(null);
 var museums1 = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
@@ -415,7 +415,7 @@ map = L.map("map", {
   attributionControl: false
 });
 
-/* Layer control listeners that allow for a single markerClusters layer */
+/* Layer control listeners that allow for a single  layer */
 map.on("overlayadd", function(e) {
   if (e.layer === theaterLayer) {
     markerClusters.addLayer(theaters);
@@ -424,7 +424,16 @@ map.on("overlayadd", function(e) {
   if (e.layer === museumLayer) {
     markerClusters.addLayer(museums);
     syncSidebar();
+	
+  }if (e.layer === theater1Layer) {
+    markerClusters.addLayer(theaters1);
+    syncSidebar();
   }
+  if (e.layer === museum1Layer) {
+    markerClusters.addLayer(museums1);
+    syncSidebar();
+  }
+  
 });
 
 map.on("overlayremove", function(e) {
@@ -436,6 +445,15 @@ map.on("overlayremove", function(e) {
     markerClusters.removeLayer(museums);
     syncSidebar();
   }
+  if (e.layer === theater1Layer) {
+    markerClusters.removeLayer(theaters1);
+    syncSidebar();
+  }
+  if (e.layer === museum1Layer) {
+    markerClusters.removeLayer(museums1);
+    syncSidebar();
+  }
+  
 });
 
 /* Filter sidebar feature list to only show features in current map bounds */
