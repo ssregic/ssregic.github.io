@@ -354,7 +354,7 @@ var attributionControl = L.control({
 });
 attributionControl.onAdd = function (map) {
   var div = L.DomUtil.create("div", "leaflet-control-attribution");
-  div.innerHTML = "<span class='hidden-xs'>Desarrollado por <a href='http://ssregic.github.io/'>SSREGIC</a>";
+  div.innerHTML = "<span class='hidden-xs'>Developed by <a href='http://bryanmcbride.com'>bryanmcbride.com</a> | </span><a href='#' onclick='$(\"#attributionModal\").modal(\"show\"); return false;'>Attribution</a>";
   return div;
 };
 map.addControl(attributionControl);
@@ -382,8 +382,8 @@ var locateControl = L.control.locate({
   icon: "fa fa-location-arrow",
   metric: false,
   strings: {
-    title: "Mi Ubicacion",
-    popup: "Te encuentras a {distance} {unit} de este punto",
+    title: "My location",
+    popup: "You are within {distance} {unit} from this point",
     outsideMapBoundsMsg: "You seem located outside the boundaries of the map"
   },
   locateOptions: {
@@ -446,7 +446,7 @@ $(document).one("ajaxStop", function () {
   featureList.sort("feature-name", {order:"asc"});
 
   var boroughsBH = new Bloodhound({
-    name: "Comunas",
+    name: "Boroughs",
     datumTokenizer: function (d) {
       return Bloodhound.tokenizers.whitespace(d.name);
     },
@@ -456,7 +456,7 @@ $(document).one("ajaxStop", function () {
   });
 
   var theatersBH = new Bloodhound({
-    name: "Obras Iniciadas",
+    name: "Theaters",
     datumTokenizer: function (d) {
       return Bloodhound.tokenizers.whitespace(d.name);
     },
@@ -466,7 +466,7 @@ $(document).one("ajaxStop", function () {
   });
 
   var museumsBH = new Bloodhound({
-    name: "Obras No Iniciadas",
+    name: "Museums",
     datumTokenizer: function (d) {
       return Bloodhound.tokenizers.whitespace(d.name);
     },
@@ -516,26 +516,26 @@ $(document).one("ajaxStop", function () {
     highlight: true,
     hint: false
   }, {
-    name: "Comunas",
+    name: "Boroughs",
     displayKey: "name",
     source: boroughsBH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'>Comunas</h4>"
+      header: "<h4 class='typeahead-header'>Boroughs</h4>"
     }
   }, {
-    name: "Obras Iniciadas",
+    name: "Theaters",
     displayKey: "name",
     source: theatersBH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='assets/img/theater.png' width='24' height='28'>&nbsp;Obras Iniciadas</h4>",
+      header: "<h4 class='typeahead-header'><img src='assets/img/theater.png' width='24' height='28'>&nbsp;Theaters</h4>",
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{address}}</small>"].join(""))
     }
   }, {
-    name: "Obras No Iniciadas",
+    name: "Museums",
     displayKey: "name",
     source: museumsBH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='assets/img/museum.png' width='24' height='28'>&nbsp;Obras No Iniciadas</h4>",
+      header: "<h4 class='typeahead-header'><img src='assets/img/museum.png' width='24' height='28'>&nbsp;Museums</h4>",
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{address}}</small>"].join(""))
     }
   }, {
@@ -546,10 +546,10 @@ $(document).one("ajaxStop", function () {
       header: "<h4 class='typeahead-header'><img src='assets/img/globe.png' width='25' height='25'>&nbsp;GeoNames</h4>"
     }
   }).on("typeahead:selected", function (obj, datum) {
-    if (datum.source === "Comunas") {
+    if (datum.source === "Boroughs") {
       map.fitBounds(datum.bounds);
     }
-    if (datum.source === "Obras Iniciadas") {
+    if (datum.source === "Theaters") {
       if (!map.hasLayer(theaterLayer)) {
         map.addLayer(theaterLayer);
       }
@@ -558,7 +558,7 @@ $(document).one("ajaxStop", function () {
         map._layers[datum.id].fire("click");
       }
     }
-    if (datum.source === "Obras No Iniciadas") {
+    if (datum.source === "Museums") {
       if (!map.hasLayer(museumLayer)) {
         map.addLayer(museumLayer);
       }
