@@ -528,7 +528,7 @@ $(document).one("ajaxStop", function () {
     source: theatersBH.ttAdapter(),
     templates: {
       header: "<h4 class='typeahead-header'><img src='assets/img/theater.png' width='24' height='28'>&nbsp;Obra Iniciada</h4>",
-      suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{name}}</small>"].join(""))
+      suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{ESTADO}}</small>"].join(""))
     }
   }, {
     name: "Museums",
@@ -536,7 +536,7 @@ $(document).one("ajaxStop", function () {
     source: museumsBH.ttAdapter(),
     templates: {
       header: "<h4 class='typeahead-header'><img src='assets/img/museum.png' width='24' height='28'>&nbsp;Obra No Iniciada</h4>",
-      suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{name}}</small>"].join(""))
+      suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{ESTADO}}</small>"].join(""))
     }
   }, {
     name: "GeoNames",
