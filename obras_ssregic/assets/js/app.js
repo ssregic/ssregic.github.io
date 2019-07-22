@@ -243,7 +243,7 @@ var theaters = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {
       icon: L.icon({
-        iconUrl: "assets/img/theater.png",
+        iconUrl: "assets/img/micro.png",
         iconSize: [42, 42],
         iconAnchor: [12, 28],
         popupAnchor: [0, -25]
@@ -263,7 +263,7 @@ var theaters = L.geoJson(null, {
           highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], highlightStyle));
         }
       });
-      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="assets/img/theater.png"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="assets/img/micro.png"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       theaterSearch.push({
         name: layer.feature.properties.NAME,
         address: layer.feature.properties.address,
@@ -286,7 +286,7 @@ var theaters1 = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {
       icon: L.icon({
-        iconUrl: "assets/img/theater.png",
+        iconUrl: "assets/img/mayor.png",
         iconSize: [42, 42],
         iconAnchor: [12, 28],
         popupAnchor: [0, -25]
@@ -306,7 +306,7 @@ var theaters1 = L.geoJson(null, {
           highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], highlightStyle));
         }
       });
-      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="assets/img/theater.png"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="assets/img/mayor.png"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       theaterSearch1.push({
         name: layer.feature.properties.NAME,
         address: layer.feature.properties.address,
@@ -328,7 +328,7 @@ var museums = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {
       icon: L.icon({
-        iconUrl: "assets/img/museum.png",
+        iconUrl: "assets/img/media.png",
         iconSize: [42, 42],
         iconAnchor: [12, 28],
         popupAnchor: [0, -25]
@@ -348,7 +348,7 @@ var museums = L.geoJson(null, {
           highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], highlightStyle));
         }
       });
-      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="assets/img/museum.png"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="assets/img/media.png"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       museumSearch.push({
         name: layer.feature.properties.NAME,
         address: layer.feature.properties.address,
@@ -370,7 +370,7 @@ var museums1 = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {
       icon: L.icon({
-        iconUrl: "assets/img/museum.png",
+        iconUrl: "assets/img/menor.png",
         iconSize: [42, 42],
         iconAnchor: [12, 28],
         popupAnchor: [0, -25]
@@ -390,7 +390,7 @@ var museums1 = L.geoJson(null, {
           highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], highlightStyle));
         }
       });
-      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="assets/img/museum.png"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="assets/img/menor.png"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       museumSearch1.push({
         name: layer.feature.properties.NAME,
         address: layer.feature.properties.address,
@@ -536,13 +536,13 @@ var baseLayers = {
 var groupedOverlays = {
   "Estado de Obra": {
     
-	"<img src='assets/img/theater.png' width='24' height='28'>&nbsp;Micro Obra": theaterLayer,
+	"<img src='assets/img/micro.png' width='24' height='28'>&nbsp;Micro Obra": theaterLayer,
 	
-	"<img src='assets/img/theater.png' width='24' height='28'>&nbsp;Obra Mayor": theater1Layer,
+	"<img src='assets/img/mayor.png' width='24' height='28'>&nbsp;Obra Mayor": theater1Layer,
     
-	"<img src='assets/img/theater.png' width='24' height='28'>&nbsp;Obra Media": museumLayer,
+	"<img src='assets/img/media.png' width='24' height='28'>&nbsp;Obra Media": museumLayer,
     
-	"<img src='assets/img/museum.png' width='24' height='28'>&nbsp;Obra Menor": museum1Layer
+	"<img src='assets/img/menor.png' width='24' height='28'>&nbsp;Obra Menor": museum1Layer
   },
   "Referencias": {
     "Comunas": boroughs
@@ -682,7 +682,7 @@ $(document).one("ajaxStop", function () {
     displayKey: "address",
     source: theatersBH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='assets/img/theater.png' width='24' height='28'>&nbsp;Micro Obra</h4>",
+      header: "<h4 class='typeahead-header'><img src='assets/img/micro.png' width='24' height='28'>&nbsp;Micro Obra</h4>",
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{address}}</small>"].join(""))
     }
   }, 
@@ -692,7 +692,7 @@ $(document).one("ajaxStop", function () {
     displayKey: "address",
     source: theaters1BH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='assets/img/theater.png' width='24' height='28'>&nbsp;Obra Mayor</h4>",
+      header: "<h4 class='typeahead-header'><img src='assets/img/mayor.png' width='24' height='28'>&nbsp;Obra Mayor</h4>",
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{address}}</small>"].join(""))
     }
   }, 
@@ -702,7 +702,7 @@ $(document).one("ajaxStop", function () {
     displayKey: "address",
     source: museumsBH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='assets/img/museum.png' width='24' height='28'>&nbsp;Obra Media</h4>",
+      header: "<h4 class='typeahead-header'><img src='assets/img/media.png' width='24' height='28'>&nbsp;Obra Media</h4>",
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{address}}</small>"].join(""))
     }
   }, 
@@ -712,7 +712,7 @@ $(document).one("ajaxStop", function () {
     displayKey: "address",
     source: museums1BH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='assets/img/museum.png' width='24' height='28'>&nbsp;Obra Menor</h4>",
+      header: "<h4 class='typeahead-header'><img src='assets/img/menor.png' width='24' height='28'>&nbsp;Obra Menor</h4>",
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{address}}</small>"].join(""))
     }
   }, 
