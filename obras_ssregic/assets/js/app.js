@@ -254,7 +254,7 @@ var theaters = L.geoJson(null, {
   },
   onEachFeature: function (feature, layer) {
     if (feature.properties) {
-      var content = "<table class='table table-striped table-bordered table-condensed'>" + "<tr><th>Tipo de Obra</th><td>" + feature.properties.NAME + "</td></tr>" + "<tr><th>Fecha</th><td>" + feature.properties.TEL + "</td></tr>" + "<tr><th>Direccion</th><td>" + feature.properties.address + "<tr><th>N° de Expediente</th><td>" + feature.properties.expediente + "<tr><th>Superficie M2</th><td>" + feature.properties.m2 + "</a></td></tr>" + "<table>";
+      var content = "<table class='table table-striped table-bordered table-condensed'>" + "<tr><th>Estado de Obra</th><td>" + feature.properties.NAME + "<tr><th>Tipo de Obra</th><td>" + feature.properties.TIPO_OBRA + "</td></tr>" + "<tr><th>Fecha</th><td>" + feature.properties.TEL + "</td></tr>" + "<tr><th>Direccion</th><td>" + feature.properties.address + "<tr><th>N° de Expediente</th><td>" + feature.properties.expediente + "<tr><th>Superficie M2</th><td>" + feature.properties.m2 + "</a></td></tr>" + "<table>";
       layer.on({
         click: function (e) {
           $("#feature-title").html(feature.properties.NAME);
@@ -297,7 +297,7 @@ var theaters1 = L.geoJson(null, {
   },
   onEachFeature: function (feature, layer) {
     if (feature.properties) {
-      var content = "<table class='table table-striped table-bordered table-condensed'>" + "<tr><th>Tipo de Obra</th><td>" + feature.properties.NAME + "</td></tr>" + "<tr><th>Fecha</th><td>" + feature.properties.TEL + "</td></tr>" + "<tr><th>Direccion</th><td>" + feature.properties.address + "<tr><th>N° de Expediente</th><td>" + feature.properties.expediente + "<tr><th>Superficie M2</th><td>" + feature.properties.m2 + "</a></td></tr>" + "<table>";
+      var content = "<table class='table table-striped table-bordered table-condensed'>" + "<tr><th>Estado de Obra</th><td>" + feature.properties.NAME + "<tr><th>Tipo de Obra</th><td>" + feature.properties.TIPO_OBRA + "</td></tr>" + "<tr><th>Fecha</th><td>" + feature.properties.TEL + "</td></tr>" + "<tr><th>Direccion</th><td>" + feature.properties.address + "<tr><th>N° de Expediente</th><td>" + feature.properties.expediente + "<tr><th>Superficie M2</th><td>" + feature.properties.m2 + "</a></td></tr>" + "<table>";
       layer.on({
         click: function (e) {
           $("#feature-title").html(feature.properties.NAME);
@@ -320,7 +320,6 @@ var theaters1 = L.geoJson(null, {
 });
 $.getJSON("data/obra_mayor.geojson", function (data) {
   theaters1.addData(data);
-  map.addLayer(theater1Layer);
 });
 
 /* Empty layer placeholder to add to layer control for listening when to add/remove museums to  layer */
@@ -340,7 +339,7 @@ var museums = L.geoJson(null, {
   },
   onEachFeature: function (feature, layer) {
     if (feature.properties) {
-      var content = "<table class='table table-striped table-bordered table-condensed'>" + "<tr><th>Tipo de Obra</th><td>" + feature.properties.NAME + "</td></tr>" + "<tr><th>Fecha</th><td>" + feature.properties.TEL + "</td></tr>" + "<tr><th>Direccion</th><td>" + feature.properties.address + "<tr><th>N° de Expediente</th><td>" + feature.properties.expediente + "<tr><th>Superficie M2</th><td>" + feature.properties.m2 + "</a></td></tr>" + "<table>";
+      var content = "<table class='table table-striped table-bordered table-condensed'>" + "<tr><th>Estado de Obra</th><td>" + feature.properties.NAME + "<tr><th>Tipo de Obra</th><td>" + feature.properties.TIPO_OBRA + "</td></tr>" + "<tr><th>Fecha</th><td>" + feature.properties.TEL + "</td></tr>" + "<tr><th>Direccion</th><td>" + feature.properties.address + "<tr><th>N° de Expediente</th><td>" + feature.properties.expediente + "<tr><th>Superficie M2</th><td>" + feature.properties.m2 + "</a></td></tr>" + "<table>";
       layer.on({
         click: function (e) {
           $("#feature-title").html(feature.properties.NAME);
@@ -382,7 +381,7 @@ var museums1 = L.geoJson(null, {
   },
   onEachFeature: function (feature, layer) {
     if (feature.properties) {
-      var content = "<table class='table table-striped table-bordered table-condensed'>" + "<tr><th>Tipo de Obra</th><td>" + feature.properties.NAME + "</td></tr>" + "<tr><th>Fecha</th><td>" + feature.properties.TEL + "</td></tr>" + "<tr><th>Direccion</th><td>" + feature.properties.address + "<tr><th>N° de Expediente</th><td>" + feature.properties.expediente + "<tr><th>Superficie M2</th><td>" + feature.properties.m2 + "</a></td></tr>" + "<table>";
+      var content = "<table class='table table-striped table-bordered table-condensed'>" + "<tr><th>Estado de Obra</th><td>" + feature.properties.NAME + "<tr><th>Tipo de Obra</th><td>" + feature.properties.TIPO_OBRA + "</td></tr>" + "<tr><th>Fecha</th><td>" + feature.properties.TEL + "</td></tr>" + "<tr><th>Direccion</th><td>" + feature.properties.address + "<tr><th>N° de Expediente</th><td>" + feature.properties.expediente + "<tr><th>Superficie M2</th><td>" + feature.properties.m2 + "</a></td></tr>" + "<table>";
       layer.on({
         click: function (e) {
           $("#feature-title").html(feature.properties.NAME);
@@ -404,7 +403,7 @@ var museums1 = L.geoJson(null, {
   }
 });
 $.getJSON("data/obra_menor.geojson", function (data) {
-  museums.addData(data);
+  museums1.addData(data);
 });
 
 map = L.map("map", {
