@@ -524,7 +524,7 @@ $(document).one("ajaxStop", function () {
     }
   }, {
     name: "Theaters",
-    displayKey: "name",
+    displayKey: "address",
     source: theatersBH.ttAdapter(),
     templates: {
       header: "<h4 class='typeahead-header'><img src='assets/img/theater.png' width='24' height='28'>&nbsp;Obra Iniciada</h4>",
@@ -532,7 +532,7 @@ $(document).one("ajaxStop", function () {
     }
   }, {
     name: "Museums",
-    displayKey: "name",
+    displayKey: "address",
     source: museumsBH.ttAdapter(),
     templates: {
       header: "<h4 class='typeahead-header'><img src='assets/img/museum.png' width='24' height='28'>&nbsp;Obra No Iniciada</h4>",
