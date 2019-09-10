@@ -127,6 +127,16 @@ $(window).on('load', function() {
       if (point.Latitude !== '' && point.Longitude !== '') {
         var marker = L.marker([point.Latitude, point.Longitude], {icon: icon})
           .bindPopup("<b>SMP: </b>" + point['SMP'] + '<br>' +
+		  "<b>Partida: </b>" + point['PARTIDA'] + '<br>' +
+		  "<b>Barrio: </b>" + point['BARRIOS'] + '<br>' +
+		  "<b>Comuna: </b>" + point['COMUNA'] + '<br>' +
+		  "<b>Dirección: </b>" + point['1_DIRECCIO'] + '<br>' +
+		  "<b>Denominación: </b>" + point['DENOMINACI'] + '<br>' +
+		  "<b>Catalogación: </b>" + point['CATALOGACI'] + '<br>' +
+		  "<b>APH: </b>" + point['APH_NRO_Y_'] + '<br>' +
+		  "<b>Protección: </b>" + point['PROTECCION'] + '<br>' +
+		  "<b>Estado: </b>" + point['ESTADO'] + '<br>' +
+		  "<b>Ley 3056: </b>" + point['LEY_3056'] + '<br>' +
           (point['Image'] ? ('<img src="' + point['Image'] + '"><br>') : '') +
           point['Description']);
 
