@@ -500,7 +500,7 @@
 			}
 		},
 		CartoDB: {
-			url: 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/{variant}/{z}/{x}/{y}.png',
+			url: 'https://{s}.basemaps.cartocdn.com/rastertiles/{variant}/{z}/{x}/{y}{r}.png',
       url2: 'http://{s}.basemaps.cartocdn.com/{variant}/{z}/{x}/{y}.png',
 	  url3: 'https://{s}.basemaps.cartocdn.com/rastertiles/{variant}/{z}/{x}/{y}{r}.png',
 			options: {
