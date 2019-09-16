@@ -992,7 +992,7 @@ $(window).on('load', function() {
          mapData = Procsv;
          mapData.load({
            self: mapData,
-           tabs: ['Options', 'Points', 'Polygons', 'Polylines'],
+           tabs: ['Options', 'Points', 'Points2', 'Polygons', 'Polylines'],
            callback: onMapDataLoad
          });
        }
