@@ -521,7 +521,7 @@ $(window).on('load', function() {
         weight: 2,
         opacity: 1,
         color: tryPolygonSetting(polygon, '_outlineColor', 'white'),
-        dashArray: '3',
+        dashArray: '0', //estaba en 3
         fillOpacity: tryPolygonSetting(polygon, '_colorOpacity', '0.7'),
         fillColor: getColor(value)
       }
